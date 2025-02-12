@@ -10,7 +10,11 @@
 
 # In[1]:
 
-
+class Vehiculo:
+    def __init__(self, color, tipo, cilindraje):
+        self.color = color
+        self.tipo = tipo
+        self.cilindraje = cilindraje
 
 
 # 2) A la clase Vehiculo creada en el punto 1, agregar los siguientes métodos:<br>
@@ -20,27 +24,68 @@
 
 # In[5]:
 
+class Vehiculo:
+    def __init__(self, color, tipo, cilindraje):
+        self.color = color 
+        self.tipo = tipo
+        self.cilindraje = cilindraje
+        self.velocidad = 0
+        self.direccion = 0
 
-
-
-
+    def Acelerar (self, vel):
+        self.velocidad += vel
+    
+    def Frenar (self, vel):
+        self.velocidad -= vel
+    
+    def Doblar (self, grados):
+        self.direccion += grados
 # 3) Instanciar 3 objetos de la clase vehículo y ejecutar sus métodos, probar luego el resultado
 
 # In[6]:
 
-
-
-
+a = Vehiculo ('verde', 'moto', 5.7)
+b = Vehiculo('azul', 'carro', 35)
+c = Vehiculo('violeta', 'cuatrimoto', 7,12)
 
 # 4) Agregar a la clase Vehiculo, un método que muestre su estado, es decir, a que velocidad se encuentra y su dirección. Y otro método que muestre color, tipo y cilindrada
 
 # In[12]:
 
+class Vehiculo:
+    def __init__(self, color, tipo, cilindraje):
+        self.color = color 
+        self.tipo = tipo
+        self.cilindraje = cilindraje
+        self.velocidad = 0
+        self.direccion = 0
 
+    def Acelerar (self, vel):
+        self.velocidad += vel
+    
+    def Frenar (self, vel):
+        self.velocidad -= vel
+    
+    def Doblar (self, grados):
+        self.direccion += grados
 
+    def Estado (self):
+        print(f'El vehiculo tiene una velocidad de {self.velocidad} hacia {self.direccion}')
 
+    def Caracteristicas (self):
+        print(f'Color: {self.color}')
+        print(f'Tipo: {self.tipo}')
+        print(f'Cilindrada: {self.cilindraje}')
 
+a = Vehiculo ('verde', 'moto', 5.7)
+b = Vehiculo('azul', 'carro', 35)
+c = Vehiculo('violeta', 'cuatrimoto', 7.1)
 
+a.Acelerar(57)
+a.Doblar(21)
+
+a.Estado()
+b.Caracteristicas ()
 # In[13]:
 
 
